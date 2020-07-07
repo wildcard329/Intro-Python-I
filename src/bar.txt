@@ -1,0 +1,3 @@
+opening file 
+ writing to file 
+ closing file
