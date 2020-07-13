@@ -30,3 +30,51 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+user_input = sys.argv
+
+def user_date(user_input):
+  if len(user_input) == 3:
+    print(calendar.month(int(user_input[2]), int(user_input[1]), 2, 1))
+  elif len(user_input) == 2:
+    today = datetime.today()
+    print(calendar.month(today.year, int(user_input[1])), 2, 1)
+  elif len(user_input) == 1:
+    today = datetime.today()
+    print(calendar.month(today.year, today.month, 2, 1))
+  else:
+    print("invalid syntax")
+
+user_date(user_input)
+
+# program = True
+
+# def user_month(month, year):
+#   print(month, year)
+#   today = calendar.monthcalendar(year, month)
+#   print(today)
+
+# def current_month():
+#   today = datetime.today()
+#   empty_cal = datetime(today.year, today.month, today.day)
+#   c_month = user_month(today.month, today.year)
+#   print(c_month) 
+
+# while program:
+#   user_input = input("Please input a month and a year")
+#   print(user_input)
+#   if user_input == True:
+#     user_input = int(user_input)
+#     continue
+#   elif user_input == (''):
+#     current_month()
+#   else:
+#     print('Incorrect syntax')
+#     program = False
+  
+
+# def enterMonthYear():
+#   user_input = input('Enter a month and a year')
+#   if user_input == False:
+#     pass 
+#   elif user_input == (range(1 - 12) and range(0 - 3000)):
