@@ -60,4 +60,4 @@ print(waypoints)
 # YOUR CODE HERE
 
 for point in waypoints:
-    print(point)
+    print(point.keys())

@@ -18,13 +18,7 @@ print(f1(1, 2))
 # YOUR CODE HERE
 
 def f2(*args):
-    # for arg in args:
-    #     print('flag',arg)
-    # argv = []
-    # argv.append(args)
-    # if len(args) == 1:
-    #     return args
-    # else:
+
     for arg in args:
         if type(arg) == list:
             total = sum(arg)
@@ -32,11 +26,6 @@ def f2(*args):
         else:
             total = sum(args)
             return total
-        # for item in args:
-        #     print('flag', item)
-        #     total += item
-        #     print('flag2', total)
-        #     return total
 
 print(f2(1))                    # Should print 1
 print(f2(1, 3))                 # Should print 4
@@ -74,10 +63,7 @@ print(f3(8))     # Should print 9
 # Note: Google "python keyword arguments".
 
 # YOUR CODE HERE
-def f4(*d, **b):
-    for key, value in d:
-        print(f'key: {key} value: {value}')
-
+def f4(**b):
     for key in b:
         print(f'key: {key} value: {b[key]}')
 
@@ -99,4 +85,4 @@ d = {
 
 # How do you have to modify the f4 call below to make this work?
 
-f4(d)
+f4(**d)
